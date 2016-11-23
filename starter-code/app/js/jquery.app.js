@@ -5,7 +5,6 @@ var catObject = $.get('https://ga-cat-rescue.herokuapp.com/api/cats')
 //console.log(data);
 array = jQuery.parseJSON(catObject.responseText);
 	for (var i = 0; i < array.length; i++) {
-	
 	$('#cats').append('<li>'+array[i].name +': ' + array[i].note+'</li>');
 	}
 }); 
@@ -24,5 +23,6 @@ $(document).ready(function(){
 			console.log(cat);
 		});
 		e.preventDefault();
+		$('#cats').append('<li>'+$cName +': ' + $cNote+'</li>');
 	});
 });
