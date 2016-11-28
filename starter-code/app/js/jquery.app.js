@@ -21,8 +21,8 @@ $(document).ready(function(){ //waits for page load
 			dataType: "json"  //important to add, know how to handle info
 		}).done(function(cat) {
 			console.log(cat);
+		$('#cats').append('<li>'+cat+'</li>');  //adds submited info to list without page refresh
 		});
 		e.preventDefault();  //prevents refresh
-		$('#cats').append('<li>'+$cName +': ' + $cNote+'</li>');  //adds submited info to list without page refresh
 	});
 });
